@@ -2,9 +2,11 @@
 
 var analyzers = new List<TokenAnalyzer>
 {
-    new OperatorsTokenAnalyzer(),
-    new DelimiterTokenAnalyzer(),
+    new AttributionTokenAnalyzer(),
+    new ReservedTokenAnalyzer(),
     new NumbersTokenAnalyzer(),
+    new OperatorsTokenAnalyzer(),
+    new DelimiterTokenAnalyzer(),    
     new IdentifiersTokenAnalyzer()
     //adicionar os outros analyzers
 };
@@ -14,7 +16,7 @@ Console.WriteLine();
 
 //descomentar a linha abaixo e remover a linha onde seta entradas como uma string fixa
 //var entradas = Console.ReadLine().Split(' ');
-var entradas = "if ( a > b ) { soma = 10 }".Split(' ');
+var entradas = "while ( a < v + 4 ) { total = soma + 1 }".Split(' ');
 
 foreach (var entrada in entradas)
 {
